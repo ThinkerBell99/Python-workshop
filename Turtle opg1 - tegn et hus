@@ -1,0 +1,41 @@
+import turtle
+
+t = turtle.Turtle()
+t.shape("turtle")
+t.penup()
+t.goto(-150,-150)
+t.write("tegn et hus!", font=("Arial", 14, "italic"))
+
+#start tegning (højre side af huset)
+t.pendown()
+t.pencolor("blue")
+t.forward(150)
+t.left(90)
+t.pencolor("black")
+t.forward(100)
+t.right(45)
+t.pencolor("black")
+
+#start udfyldning af formen(tag plus skorsten)
+t.begin_fill()
+t.fillcolor("red")
+t.forward(100)
+t.right(90)
+t.forward(60)
+t.left(135)
+t.forward(20)
+t.right(90)
+t.forward(20)
+t.right(90)
+t.forward(48)
+t.left(45)
+t.end_fill()
+#færdig
+
+#tegn resten af huset efter taget
+t.right(45)
+t.forward(100)
+t.left(90)
+t.pencolor("blue")
+t.forward(150)
+
