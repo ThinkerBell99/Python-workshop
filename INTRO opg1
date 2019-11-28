@@ -1,0 +1,51 @@
+name = input("Hvad er dit navn: ")
+age = input("hvor gammel er du ")
+print("Hej " + name + " du er " + age)
+regne = input("Kan du regne? ")
+if regne == "ja":
+    print("lad os gå igang!")
+elif regne == "nej":
+    print("jeg hjælper dig!")
+else:
+    print("hmm...? lad os prøve alligevel!")
+    
+num1 = float(input("Skriv et tal: "))
+op = input("vælg + - / eller *: ")
+num2 = float(input("skriv et tal til: "))
+
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "/":
+    print(num1 / num2)
+elif op == "*":
+    print(num1 * num2)
+else:
+    print("forkert tegn")
+
+
+svar = input("skal vi lege en leg? ")
+if svar == "ja":
+    secret_word = "Lenovo"
+    guess = ""
+    guess_count = 0
+    guess_limit = 3
+    out_of_guesses = False
+
+    while guess != secret_word and not(out_of_guesses):
+        if guess_count < guess_limit:
+            guess = input("gæt mit navn: ")
+            guess_count += 1
+        else:
+            out_of_guesses = True
+
+    if out_of_guesses:
+        print("Du tabte")
+    else:
+        print("du gættede rigtigt!")
+elif svar == "nej":
+    print("æv!")
+else:
+    print("hmm...?")
+
