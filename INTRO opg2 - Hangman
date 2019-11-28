@@ -1,0 +1,49 @@
+import random
+
+svarliste = ["abesnot", "jazz", "appelsin", "juletræ"]
+random.shuffle(svarliste)
+svar = list(svarliste[0]) #svar = abesnot
+
+#print(answer)
+
+#tøm liste display
+display = []
+
+#tilføjer variabel svar til display
+display.extend(svar)
+#print(display)
+
+#print(brugt)
+
+#itteraterer gennem listen display
+for i in range (len(display)):
+    #indsætter _ ved hvert bogstav
+    display[i] = "_" #svar = a,b,e,s,n,o,t = _ _ _ _ _ _ _
+
+# "join" kommandoen sætter mellemrum ind mellem hvert _
+print(' '.join(display))
+print()
+
+#tælleren stopper spillet når alle bogstaver er gættet
+count = 0
+#spørger bruger hele tiden indtil alle bogstaver er gættet
+while count < len(svar):
+    guess = input("gæt et bogstav: ")
+    guess = guess.lower()
+    print(count)
+    
+    #ittererer gennem bogstaverne i svar
+    for i in range(len(svar)):
+        #hvis gættet bogstav passer til bogstav i svaret
+        if svar[i] == guess :
+            #erstat index med hvad de gættede som passede
+            display[i] = guess
+            count = count + 1
+            
+            #print (brugt)
+            
+    #print den nye tråd med gættede bogstaver
+            print(' '.join(display))
+            print()
+print("godt gættet!!!")
+    
