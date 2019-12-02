@@ -1,0 +1,8 @@
+input_string=input("skriv en liste med ord brug komma til at opdele i stedet for mellemrumtryk enter når du er færdig:\n")
+my_list=input_string.replace(" "," ").split(",")
+print(my_list)
+
+ 
+#skriv en liste med ord brug komma til at opdele i stedet for mellemrumtryk enter når du er færdig:
+#fx: hej,med,dig
+#output: ['hej', 'med', 'dig']
