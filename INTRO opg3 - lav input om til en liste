@@ -1,0 +1,14 @@
+# laver en tom liste 
+list = [] 
+  
+# nummer af elementer(antal tal) som input 
+n = int(input("skriv nummer på antal elementer : ")) #skriv tallet på antal tal, tryk enter
+#indsæt listen(brug SHIFT+ENTER for at skifte linje ved hvert tal), tryk så enter igen
+  
+# itererer til range
+for i in range(0, n): 
+    element = int(input()) 
+  
+    list.append(element) # adderer elementet
+      
+print(list) 
