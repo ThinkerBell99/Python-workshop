@@ -1,0 +1,3 @@
+input = input('skriv bogstaver: ')
+outputList = list(input)
+print(outputList)
